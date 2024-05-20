@@ -1,0 +1,43 @@
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-6">Pokémon Search</h1>
+    <div class="flex justify-center mb-4 relative w-full max-w-md">
+      <input 
+        [(ngModel)]="pokemonName" 
+        (input)="filterPokemonList()" 
+        type="text" 
+        placeholder="Enter Pokémon name" 
+        class="border p-2 rounded-l w-full text-white bg-gray-400"
+      >
+      <button 
+        (click)="searchPokemon()" 
+        class="bg-blue-500 hover:bg-gray-400 text-white p-2 rounded-r"
+      >
+        Search
+      </button>
+      <ul 
+        *ngIf="filteredPokemonList.length" 
+        class="absolute left-0 right-0 top-10 bg-gray-900 border mt-1 rounded shadow-lg max-h-48 overflow-y-auto z-0 "
+      >
+        <li 
+          *ngFor="let pokemon of filteredPokemonList" 
+          (click)="selectPokemon(pokemon.name)" 
+          class="p-2 cursor-pointer hover:bg-gray-800 text-white"
+        >
+          {{ pokemon.name }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="pokemon" class="text-center">
+      <h2 class="text-2xl font-bold">{{ pokemon.name | uppercase }}</h2>
+      <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" class="mx-auto my-4">
+      <ul>
+        <li *ngFor="let stat of pokemon.stats">
+          {{ stat.stat.name | uppercase }}: {{ stat.base_stat }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="!pokemon && pokemonName" class="text-center text-red-500">
+      Pokémon not found.
+    </div>
+  </div>
+  
