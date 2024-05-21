@@ -12,37 +12,6 @@ Este repositorio contiene mis apuntes y recursos mientras aprendo las siguientes
 - **CSS**
 - **SASS**
 
-- ## 📘 Índice de Contenidos
-
-### Angular
-- [Introducción](angular/introduccion.md)
-- [Componentes](angular/componentes.md)
-- [Servicios](angular/servicios.md)
-
-### TypeScript
-- [Conceptos Básicos](typescript/basico.md)
-- [Conceptos Avanzados](typescript/avanzado.md)
-- [Consejos y Trucos](typescript/tips.md)
-
-### JavaScript
-- [Fundamentos](javascript/fundamentos.md)
-- [Características de ES6+](javascript/ES6+.md)
-- [Mejores Prácticas](javascript/best-practices.md)
-
-### CSS
-- [Selectores](css/selectores.md)
-- [Flexbox](css/flexbox.md)
-- [Grid](css/grid.md)
-
-### SASS
-- [Sintaxis](sass/sintaxis.md)
-- [Mixins](sass/mixins.md)
-- [Funciones](sass/funciones.md)
-
-### Tailwind CSS
-- [Configuración](tailwind/configuracion.md)
-- [Utilidades](tailwind/utilidades.md)
-- [Ejemplos Prácticos](tailwind/ejemplos.md)
 
 ## ✨ Recursos Adicionales
 - [Documentación Oficial de Angular](https://angular.io/docs)
