@@ -1,11 +1,12 @@
-<div *ngIf = "pokemon" class = "text-center">
-    <h2 class="text-2xl font-bold">{{pokemon.name | uppercase}}</h2>
-    <img [src] = "pokemon.sprites.front_default" alt = "{{pokemon.name}}" class = "mx-auto my-4" />
+<!-- src/app/components/pokemon-detail/pokemon-detail.component.html -->
+<div *ngIf="pokemon">
+    <h2>{{ pokemon.name | uppercase }}</h2>
+    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}">
     <ul>
-        <li *ngFor ="let stat of pokemon.stats">
-            {{stat.stat.name | uppercase}}: {{stat.base_stat}
-        </li>
+      <li *ngFor="let stat of pokemon.stats">
+        {{ stat.stat.name | uppercase }}: {{ stat.base_stat }}
+      </li>
     </ul>
-    <app-pokemon-moves [moves] = "pokemon.moves"></app-pokemon-moves>
-    <app-evolution-chain [chainId] = "pokemon.species.evolution_chain.url"></app-evolution-chain>
-</div>
+    
+  </div>
+  

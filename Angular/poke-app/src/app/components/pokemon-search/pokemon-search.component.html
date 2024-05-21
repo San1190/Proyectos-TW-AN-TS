@@ -39,5 +39,11 @@
     <div *ngIf="!pokemon && pokemonName" class="text-center text-red-500">
       Pokémon not found.
     </div>
+
+
+    <app-pokemon-moves [moves]="pokemon.moves"></app-pokemon-moves>
+    <app-pokemon-detail [pokemon]="pokemon"></app-pokemon-detail>
+
+
   </div>
   
