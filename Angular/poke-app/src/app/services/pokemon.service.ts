@@ -19,4 +19,12 @@ export class PokemonService {
   getPokemonList(): Observable<any>{
     return this.http.get<any>(`${this.apiUrl}/pokemon?limit=1000`);
   }
+
+  getMove(moveId: string | number): Observable<any>{
+    return this.http.get<any>(`${this.apiUrl}/move/${moveId}`);
+  }
+
+  getEvolutionChain(chainId:number): Observable<any>{
+    return this.http.get<any>(`${this.apiUrl}/evolution-chain/${chainId}`);
+  }
 }
