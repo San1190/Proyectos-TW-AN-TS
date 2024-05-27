@@ -1,5 +1,5 @@
 <!-- src/app/components/pokemon-detail/pokemon-detail.component.html -->
-<div *ngIf="pokemon">
+<div *ngIf="pokemon" class="p-30">
     <h2>{{ pokemon.name | uppercase }}</h2>
     <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}">
     <ul>

@@ -10,6 +10,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [RouterOutlet, PokemonSearchComponent, CommonModule,]
+  imports: [RouterOutlet, PokemonSearchComponent, CommonModule,PokemonDetailComponent]
 })
 export class AppComponent { }

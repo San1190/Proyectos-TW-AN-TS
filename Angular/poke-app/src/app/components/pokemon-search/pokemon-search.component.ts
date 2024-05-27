@@ -16,33 +16,30 @@ import { PokemonDetailComponent } from '../pokemon-detail/pokemon-detail.compone
 })
 export class PokemonSearchComponent {
   pokemon: any;
-  pokemonName: string = '';
+  pokemonName: string = ' ';
   pokemonList: any[] = [];
   filteredPokemonList: any[] = [];
   evolutionChainId: number = 0;
 
   constructor(private pokemonService: PokemonService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.pokemonService.getPokemonList().subscribe(data => {
       this.pokemonList = data.results;
     });
   }
 
   searchPokemon() {
-    if (this.pokemonName) {
-      this.pokemonService.getPokemon(this.pokemonName.toLowerCase()).subscribe(data => {
-        this.pokemon = data;
-      }, error => {
-        this.pokemon = null;
-      });
-    }
+    this.pokemonService.getPokemon(this.pokemonName).subscribe(data => {
+      this.pokemon = data;
+      this.evolutionChainId = this.pokemon.species.url.split('/')[6];
+    });
   }
 
   filterPokemonList() {
-    this.filteredPokemonList = this.pokemonList.filter(pokemon =>
-      pokemon.name.toLowerCase().startsWith(this.pokemonName.toLowerCase())
-    );
+    this.filteredPokemonList = this.pokemonList.filter(pokemon => {
+      return pokemon.name.includes(this.pokemonName);
+    });
   }
 
   selectPokemon(name: string) {

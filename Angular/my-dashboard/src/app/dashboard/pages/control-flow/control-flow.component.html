@@ -1,0 +1,22 @@
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">if: {{showContent() }}</h2>
+
+    <button 
+    class ="p-2 bg-blue-500 rounded text-white"
+    (click)="toggleContent()">
+      Click me!
+    </button>
+
+    @if(showContent()){
+      <p class="text-gray-800 mt-5">
+        This is the content that is shown when the button is clicked
+      </p>
+    } @else {
+      <p class="text-gray-800 mt-5">
+        This is the content that is hidden when the button is clicked
+      </p>
+    }
+
+  </div>
+</section>

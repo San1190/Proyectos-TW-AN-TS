@@ -17,7 +17,7 @@ export class PokemonService {
   }
 
   getPokemonList(): Observable<any>{
-    return this.http.get<any>(`${this.apiUrl}/pokemon?limit=500`);
+    return this.http.get<any>(`${this.apiUrl}/pokemon?limit=1000`);
   }
 
   getMove(moveId: string | number): Observable<any>{
