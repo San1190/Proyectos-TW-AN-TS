@@ -1,3 +1,13 @@
+
+
+
+<!-- <h1 class = "text-3xl mb-5">Control Flow</h1> -->
+
+<app-title title="Control Flow" withShadow ></app-title>
+
+
+
+
 <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
   <div class="bg-white rounded shadow p-10">
     <h2 class="text-2xl font-bold mb-5">if: {{showContent() }}</h2>
@@ -17,6 +27,58 @@
         This is the content that is hidden when the button is clicked
       </p>
     }
+
+  </div>
+
+  <!-- @Switch-->
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">{{grade() }}</h2>
+    @switch (grade()) {
+      @case('A'){
+        <p>Has sacado un 90</p>
+      }
+      @case('B'){
+        <p>Has sacado un 80</p>
+      }
+      @default{
+        <p>Has suspendido</p>
+      }
+    }
+
+
+
+  </div>
+
+  <!-- @For-->
+  <div class="bg-white rounded shadow p-10">
+
+    <ul>
+
+      @for(framework of frameworks(); track framework; let i = $index ,firts = $first, last = $last, even = $even, odd = $odd, count = $count){
+        <li [class] = "{
+          'bg-red-100': even && !firts && !last,
+          'bg-purple-100': odd && !firts && !last,
+          'bg-blue-100': firts || last
+        }">
+          {{i + 1}}/{{ count }} - {{framework}}
+        </li>
+        
+      }
+    </ul>
+
+  </div>
+  <div class="bg-white rounded shadow p-10">
+    <ul>
+        
+        @for(framework of frameworks2(); track framework; let i = $index){
+          <li>{{framework}}</li>
+    
+        }@empty {
+          <li>
+            No frameworks agregados
+          </li>
+        }
+    </ul>
 
   </div>
 </section>

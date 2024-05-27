@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, booleanAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-title',
-  templateUrl: './title.component.html',
-  styleUrls: ['./title.component.css'],
+  template: `
+    <h1 class = "text-3xl mb-5">{{title}}- {{withShadow}}</h1>
+  `,
   standalone: true,
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent {
 
-  constructor() { }
+  @Input({required:true}) title!: string;
+  @Input({transform: booleanAttribute}) withShadow: boolean = false; 
 
-  ngOnInit() {
-  }
 
 }
