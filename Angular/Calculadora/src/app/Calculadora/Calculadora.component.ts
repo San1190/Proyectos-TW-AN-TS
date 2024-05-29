@@ -6,8 +6,8 @@ import { TitleComponent } from '../shared/titulo/titulo.component';
 
 @Component({
   selector: 'app-calculadora',
-  templateUrl: './calculadora.component.html',
-  styleUrls: ['./calculadora.component.css'],
+  templateUrl: './Calculadora.component.html',
+  styleUrls: ['./Calculadora.component.css'],
   imports: [TitleComponent, RegistroComponent],
   standalone: true
 })

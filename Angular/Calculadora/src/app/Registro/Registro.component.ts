@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-registro',
-  templateUrl: './registro.component.html',
+  templateUrl: './Registro.component.html',
   standalone: true,
   imports:[CommonModule]
 
