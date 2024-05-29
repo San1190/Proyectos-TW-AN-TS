@@ -1,0 +1,40 @@
+
+<app-titulo titulo="Calculadora :)"></app-titulo>
+
+
+
+<section class="bg-gray-800 flex items-center justify-center min-h-screen">
+  <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+
+     <div>
+        <input type = "text" id="display" class="w-full p-2 my-2 bg-gray-200 rounded text-xl" [value] = "currentInput" readonly>
+    </div>
+    <div class="grid grid-cols-4 gap-2">
+        <button (click) = "onButtonClick('7')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">7</button>
+        <button (click) = "onButtonClick('8')"  class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">8</button>
+        <button (click) = "onButtonClick('9')"  class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">9</button>
+        <button (click) = "onButtonClick('C')"class="bg-orange-500 text-white p-4 px-10 rounded hover:bg-orange-600">C</button>
+
+        <button (click) = "onButtonClick('4')"  class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">4</button>
+        <button (click) = "onButtonClick('5')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">5</button>
+        <button (click) = "onButtonClick('6')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">6</button>
+        <button (click) = "onButtonClick('/')" class="bg-gray-500 text-white p-4 px-10 rounded hover:bg-slate-600">/</button>
+
+        <button (click) = "onButtonClick('1')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">1</button>
+        <button (click) = "onButtonClick('2')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">2</button>
+        <button (click) = "onButtonClick('3')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">3</button>
+        <button (click) = "onButtonClick('*')" class="bg-gray-500 text-white p-4 px-10 rounded hover:bg-slate-600">*</button>
+
+        <button (click) = "onButtonClick('0')" class="bg-blue-500 text-white p-4 px-10 rounded hover:bg-blue-600">0</button>
+        <button (click) = "onButtonClick('.')" class="bg-gray-500 text-white p-4 px-10 rounded hover:bg-slate-600">.</button>
+        <button (click) = "onButtonClick('-')" class="bg-gray-500 text-white p-4 px-10 rounded hover:bg-slate-600">-</button>
+        <button (click) = "onButtonClick('+')"  class="bg-gray-500 text-white p-4 px-10 rounded hover:bg-slate-600">+</button>
+
+        <button (click) = "onButtonClick('=')" class="col-span-4 bg-orange-500 text-white p-4 rounded hover:bg-orange-600">=</button>
+
+    </div>
+  </div>
+
+
+
+</section>
