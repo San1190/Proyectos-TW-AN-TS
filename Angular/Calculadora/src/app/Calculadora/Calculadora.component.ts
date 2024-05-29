@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistroService } from '../services/registro.service'; // Importa el servicio de registro
+import RegistroComponent from '../Registro/Registro.component'; // Importa el componente de registro
 import { TitleComponent } from '../shared/titulo/titulo.component';
+
 
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css'],
-  standalone: true,
-  imports: [TitleComponent]
+  imports: [TitleComponent, RegistroComponent],
+  standalone: true
 })
 export default class CalculadoraComponent implements OnInit {
   currentInput: string = '0';
@@ -14,7 +17,7 @@ export default class CalculadoraComponent implements OnInit {
   secondOperand: string = '';
   operator: string = '';
 
-  constructor() {}
+  constructor(private registroService: RegistroService) {} // Inyecta el servicio de registro
 
   ngOnInit() {}
 
@@ -51,6 +54,9 @@ export default class CalculadoraComponent implements OnInit {
       this.secondOperand = this.currentInput;
       const result = this.calculate(parseFloat(this.firstOperand), parseFloat(this.secondOperand), this.operator);
       this.currentInput = result.toString();
+
+
+      this.registroService.registrarOperacion(`${this.firstOperand} ${this.operator} ${this.secondOperand} = ${result}`);
       this.firstOperand = '';
       this.operator = '';
       this.secondOperand = '';
