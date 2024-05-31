@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-6 rounded shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">Wordle</h1>
+    <div id="board" class="grid grid-cols-5 gap-2"></div>
+    <input id="guessInput" type="text" maxlength="5" class="mt-4 p-2 border rounded w-full" placeholder="Introduce tu palabra" />
+    <button id="submitGuess" class="mt-2 p-2 bg-blue-500 text-white rounded w-full">Enviar</button>
+  </div>
+  <script src="dist/script.js"></script>
+</body>
+</html>
