@@ -15,14 +15,16 @@ export class ListComponent{
   }];
 
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
   //TODO crear un evento para emitir el id del personaje a eliminar
 
 
-  onDeleteCharacter(index: number): void {
+  onDeleteCharacter(id?: string): void {
     //TODO emitir el id del personaje a eliminar
-    this.onDelete.emit(index);
+    if(!id) return;
+    
+    this.onDelete.emit(id);
 
   }
 
