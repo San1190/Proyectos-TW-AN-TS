@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'shared-lazyimage',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LazyimageComponent implements OnInit {
 
+  @Input()
+  public url!: string;
+
+  @Input()
+  public alt: string = '';
+
+  public hasLoaded: boolean = false;
+  
+
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    if(!this.url) throw new Error('Url not implemented.');
   }
 
+  onLoad(){
+    console.log('Image loaded');
+    this.hasLoaded = true;
+  }
 }
