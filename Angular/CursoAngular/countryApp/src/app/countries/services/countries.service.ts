@@ -47,7 +47,7 @@ export class CountriesService {
 
     searchCountry(term: string): Observable<Country[]>{
 
-      const url = `${this.apiUrl}/capital/${term}`
+      const url = `${this.apiUrl}/country/${term}`
       return this.getCountriesRequest(url)
     }
 
@@ -55,7 +55,7 @@ export class CountriesService {
     //region https://restcountries.com/v3.1/region/{region}
 
     searchRegion(region: string): Observable<Country[]>{
-      const url = `${this.apiUrl}/capital/${region}`
+      const url = `${this.apiUrl}/region/${region}`
       return this.getCountriesRequest(url)
 
     }
