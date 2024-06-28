@@ -12,9 +12,41 @@ export class MenuComponent {
 
   ngOnInit(): void {
     this.menuItems = [
-      {label: 'Home', icon: 'pi pi-fw pi-home'},
-      {label: 'Products', icon: 'pi pi-fw pi-shopping-cart'},
-      {label: 'Orders', icon: 'pi pi-fw pi-shopping-cart'}]
+      {
+        label: 'Pipes de Angular',
+        icon: 'pi pi-desktop',
+        items:[
+          {
+            label: 'Textos y Fechas',
+            icon: 'pi pi-align-left',
+          },
+          {
+            label: 'Números',
+            icon: 'pi pi-dollar',
+          },
+          {
+            label: 'No comunes',
+            icon: 'pi pi-globe',
+          },
+
+        ]
+      },
+      {
+
+        label: 'Pipes personalizados',
+        icon: 'pi pi-cog',
+        items:[
+          {
+            label: 'Mayúsculas',
+            icon: 'pi pi-sort-alpha-up',
+          },
+          {
+            label: 'Minúsculas',
+            icon: 'pi pi-sort-alpha-down',
+          }
+          ]
+        }
+      ];
 
   }
 
