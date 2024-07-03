@@ -4,14 +4,14 @@ import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
-  constructor(private primengConfig: PrimeNGConfig) {}
+  constructor( private primengConfig: PrimeNGConfig ) {}
 
   ngOnInit() {
-    this.primengConfig.ripple = true;
+      this.primengConfig.ripple = true;
   }
 
 }
