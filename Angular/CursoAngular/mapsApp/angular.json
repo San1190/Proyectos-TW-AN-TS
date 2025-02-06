@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "heroesApp": {
+    "mapsApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/heroes-app",
+            "outputPath": "dist/maps-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -51,8 +51,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "heroesApp:build:production"
+              "buildTarget": "mapsApp:build:production"
             },
             "development": {
-              "buildTarget": "heroesApp:build:development"
+              "buildTarget": "mapsApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,8 +102,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
